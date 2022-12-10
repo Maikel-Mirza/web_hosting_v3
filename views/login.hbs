@@ -1,0 +1,62 @@
+<title>Login Page</title>
+
+<body>
+
+<style>
+     body{
+      background-color: rgb(130, 129, 138);
+      margin: 0;
+
+    }
+</style>
+    
+
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-4">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img class="logo" src="/resources/logo2.png" alt="Web Hosting Unlimited" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="/blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="/read_more">Articles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 active" aria-current="page" href="/registration">Registration</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link border border-primary rounded px-4 py-2 bg-primary text-light" href="/login">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+</body>
+
+<main>
+    <div class="center" id="form-container">
+        <h2>Login</h2>
+        <form id="form">
+            <input id="username" class="middleCol" name="username" type="username" placeholder="username"/>
+            <input id="password" class="middleCol" name="password" type="password" placeholder="Password"/>
+            <input type="submit" value="Login" class="middleCol action-button"/>
+        </form>
+        <p>Don't have an account? Register <a href="/registration">here</a>.</p>
+    </div>
+</main>
+
+{{> formscript post="'/login-user'" onsuccess="'/dashboard'"}}
+
